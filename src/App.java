@@ -32,6 +32,10 @@ public class App {
             }
         }
 
+        for (String key : result.keySet()){
+            System.out.printf(" Cargo: %s, Número de funcionários: %d\n", key, result.get(key));
+        }
+
     }
 
 }
