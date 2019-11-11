@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class App {
@@ -35,19 +36,23 @@ public class App {
         }
 
 
-        for (Funcionario f: lista){
+        for (Funcionario f: lista) {
             String cargo = f.getCargo();
-            String nome = f.getNome();
-            if (!result2.containsKey(cargo)){
-                result2.put(f.getCargo(), new ArrayList<>() );
-            } else {
-                int ateAgora = result.get(cargo);
-                result.put(cargo, ateAgora+1);
+
+            if (!result2.containsKey(cargo)) {
+                result2.put(cargo, new ArrayList<String>());
             }
+
+            List<String> aux = result2.get(cargo);
+            aux.add(f.getNome());
+
         }
 
-        for (String key : result.keySet()){
-            System.out.printf(" Cargo: %s, Número de funcionários: %d\n", key, result.get(key));
+
+
+
+        for (String key : result2.keySet()){
+            System.out.printf(" Cargo: %s, Número de funcionários: %s\n", key, result2.get(key));
         }
 
     }
