@@ -8,10 +8,10 @@ public class App {
 
         ArrayList<Funcionario> lista = new ArrayList<>();
 
-        lista.add(new Funcionario("aaa", "Gerente"));
-        lista.add(new Funcionario("bbb", "caixa"));
-        lista.add(new Funcionario("ccc", "caixa"));
-        lista.add(new Funcionario("ddd", "caixa"));
+        lista.add(new Funcionario("aaa", "Gerente "));
+        lista.add(new Funcionario("bbb", "Caixa   "));
+        lista.add(new Funcionario("ccc", "Caixa   "));
+        lista.add(new Funcionario("ddd", "Caixa   "));
         lista.add(new Funcionario("eee", "Vendedor"));
         lista.add(new Funcionario("fff", "Vendedor"));
         lista.add(new Funcionario("ggg", "Vendedor"));
@@ -20,12 +20,26 @@ public class App {
         lista.add(new Funcionario("jjj", "Vendedor"));
         lista.add(new Funcionario("kkk", "Vendedor"));
 
-        Map<String, Integer> result = new HashMap<>();
+        Map<String, Integer> result = new HashMap<>(); //pode usar TreeMap aqui, ou HashMap, pois Map é uma interface
+
+        Map<String, ArrayList<String> > result2 = new HashMap<>();
 
         for (Funcionario f: lista){
             String cargo = f.getCargo();
             if (!result.containsKey(cargo)){
                 result.put(f.getCargo(), 1);
+            } else {
+                int ateAgora = result.get(cargo);
+                result.put(cargo, ateAgora+1);
+            }
+        }
+
+
+        for (Funcionario f: lista){
+            String cargo = f.getCargo();
+            String nome = f.getNome();
+            if (!result2.containsKey(cargo)){
+                result2.put(f.getCargo(), new ArrayList<>() );
             } else {
                 int ateAgora = result.get(cargo);
                 result.put(cargo, ateAgora+1);
