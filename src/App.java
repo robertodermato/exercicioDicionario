@@ -50,9 +50,12 @@ public class App {
 
 
 
+        for (String key : result.keySet()){
+            System.out.printf(" Cargo: %s, Número de funcionários: %d\n", key, result.get(key));
+        }
 
         for (String key : result2.keySet()){
-            System.out.printf(" Cargo: %s, Número de funcionários: %s\n", key, result2.get(key));
+            System.out.printf(" Cargo: %s, Número de funcionários: %d, Nomes: %s\n", key, result2.get(key).size(), result2.get(key));
         }
 
     }
