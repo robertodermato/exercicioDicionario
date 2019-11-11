@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class App {
 
@@ -17,6 +19,8 @@ public class App {
         lista.add(new Funcionario("iii", "Vendedor"));
         lista.add(new Funcionario("jjj", "Vendedor"));
         lista.add(new Funcionario("kkk", "Vendedor"));
+
+        Map<String, Integer> result = new HashMap<>();
 
 
 
