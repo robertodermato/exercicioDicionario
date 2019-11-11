@@ -22,8 +22,15 @@ public class App {
 
         Map<String, Integer> result = new HashMap<>();
 
-
-
+        for (Funcionario f: lista){
+            String cargo = f.getCargo();
+            if (!result.containsKey(cargo)){
+                result.put(f.getCargo(), 1);
+            } else {
+                int ateAgora = result.get(cargo);
+                result.put(cargo, ateAgora+1);
+            }
+        }
 
     }
 

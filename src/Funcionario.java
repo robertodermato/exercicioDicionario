@@ -15,5 +15,8 @@ public class Funcionario {
         return cargo;
     }
 
+    public String toString(){
+        return "Nome: " + nome + ", Cargo:" + cargo;
+    }
 
 }
