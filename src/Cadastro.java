@@ -1,6 +1,6 @@
-public class Cadastro {
-    public void add(Funcionario func);
-    public void exibeTotalPorCargo();
+//public class Cadastro {
+  //  public void add(Funcionario func);
+    //public void exibeTotalPorCargo();
 
-    private ListTAD<Funcionario> lista; // lista de funcionarios
-}
+//    private ListTAD<Funcionario> lista; // lista de funcionarios
+//}
