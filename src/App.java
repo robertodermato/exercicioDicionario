@@ -44,6 +44,7 @@ public class App {
             }
 
             List<String> aux = result2.get(cargo);
+
             aux.add(f.getNome());
 
         }
